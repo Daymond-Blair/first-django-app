@@ -13,9 +13,13 @@ def index(request):
         return HttpResponse("Hello World!")
         
 from django.contrib import admin
+
 from django.conf.urls import url
+
 from django.urls import path
+
 from django.conf.urls import include
+
 from AppTwo import views
 
 urlpatterns = [
