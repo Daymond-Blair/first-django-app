@@ -5,6 +5,7 @@ Simple "Hello World" app for learning Django URL Mapping. Utilized direct mappin
 This provides direct access to a view through its URL. It links the views.py file from the app straight to the urls.py file in the project.
 
 ### Direct Mapping Syntax
+---In views.py file (app)---
 
 from django.shortcuts import render
 
@@ -12,7 +13,9 @@ from django.http import HttpResponse
 
 def index(request):
         return HttpResponse("Hello World!")
-        
+
+---In urls.py file (project)---
+
 from django.contrib import admin
 
 from django.conf.urls import url
