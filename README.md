@@ -7,6 +7,7 @@ This provides direct access to a view through its URL. It links the views.py fil
 ### Direct Mapping Syntax
 
 from django.shortcuts import render
+
 from django.http import HttpResponse
 
 def index(request):
@@ -23,8 +24,10 @@ from django.conf.urls import include
 from AppTwo import views
 
 urlpatterns = [
-    #url('', views.index, name='index'),
+    url('', views.index, name='index'),
+    
     url(r'^AppTwo/', include('AppTwo.urls')),
+    
     path('admin/', admin.site.urls),
 ]
 
